@@ -1,0 +1,222 @@
+// progressbar.css
+
+#msform {
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+}
+#msform #progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: lightgrey;
+}
+#msform #progressbar .active {
+  color: #000000;
+}
+#msform #progressbar li {
+  float: left;
+  font-size: 12px;
+  list-style-type: none;
+  position: relative;
+  width: 25%;
+}
+#msform #progressbar li:before {
+  background: lightgray;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  height: 50px;
+  line-height: 45px;
+  margin: 0 auto 10px auto;
+  padding: 2px;
+  width: 50px;
+}
+#msform #progressbar li:after {
+  background: lightgray;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  z-index: 0;
+}
+#msform #progressbar #account:before {
+  content: "1";
+}
+#msform #progressbar #personal:before {
+  content: "2";
+}
+#msform #progressbar #payment:before {
+  content: "3";
+}
+#msform #progressbar #confirm:before {
+  content: "4";
+}
+#msform #progressbar li.active:before {
+  background: #405189;
+}
+#msform #progressbar li.active:after {
+  background: #405189;
+}
+
+
+//html file
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-sm-offset-3 col-md-12 col-md-offset-2 mt-2">
+            <!--            <div class="card">-->
+            <!--                <div class="card-body p-3">-->
+            <!--                    <div class="breadcrumbs-area">-->
+            <!--                        <ol class="breadcrumb page-breadcrumb pl-3 m-0">-->
+            <!--                            <li class="breadcrumb-item text-dark font-weight-bold">Employee</li>-->
+            <!--                            <li class="breadcrumb-item text-first">Add Employee</li>-->
+            <!--                        </ol>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+
+            <div class="bodyContent">
+                <div class="mt-3 mb-3">
+                    <div class="progressBarBox">
+                        <ul class="progressbar">
+                            <li class="active">Personal</li>
+                            <li class="active">Job Details</li>
+                            <li class="active">Education</li>
+                            <li>Experience</li>
+                            <li>Payment</li>
+                        </ul>
+                    </div>
+                    <div class="card br-0">
+                        <div class="card-header bg-white">
+                            <div class="d-flex">
+                            <div class="item-title">
+                                <span class="card-title font-weight-bold">Education Information</span>
+                            </div>
+                                <div class="addItem ml-auto">
+                                    <button class="btn btn-sm bg-first text-white" (click)="isAddMore = !isAddMore">
+                                        <span class="material-icons md-18">add</span>
+                                        <span class="icon-textAlign font-sm">Add More</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row personalInfoBox">
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+                                    <div class="form-group">
+                                        <label for="level" class="mb-1">Level</label>
+                                        <input type="text" class="form-control br-0" placeholder="Enter Level"
+                                               id="level">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+                                    <div class="form-group">
+                                        <label for="stream" class="mb-1">Stream</label>
+                                        <input type="text" class="form-control" placeholder="Enter Stream"
+                                               id="stream">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="form-group">
+                                        <label for="institute" class="mb-1">Institute Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter Institute Name"
+                                               id="institute">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-1 pl-0 pr-0">
+                                    <div class="form-group">
+                                        <label for="yearPassed" class="mb-1">Year&nbsp;Passed</label>
+                                        <input type="text" class="form-control br-0" placeholder="Year Passed"
+                                               id="yearPassed">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+                                    <div class="form-group">
+                                        <label for="percentage" class="mb-1">Percentage/CGPA</label>
+                                        <input type="text" class="form-control" placeholder="Enter Percentage/CGPA"
+                                               id="percentage">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2">
+                                    <div class="form-group">
+                                        <label for="courseType" class="mb-1">Course Type</label>
+                                            <select class="form-control" id="courseType">
+                                                <option>Regular</option>
+                                                <option>Correspondence</option>
+                                            </select>
+                                        </div>
+                                </div>
+
+                            </div>
+
+                                <ng-container *ngIf="isAddMore == true">
+                                    <div class="mt-3 border-top">
+                                        <div class="row mt-3">
+                                            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="form-group">
+                                                    <label for="level1" class="mb-1">Level</label>
+                                                    <input type="text" class="form-control br-0" placeholder="Enter Level"
+                                                           id="level1">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="form-group">
+                                                    <label for="stream1" class="mb-1">Stream</label>
+                                                    <input type="text" class="form-control" placeholder="Enter Stream"
+                                                           id="stream1">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="form-group">
+                                                    <label for="institute1" class="mb-1">Institute Name</label>
+                                                    <input type="text" class="form-control" placeholder="Enter Institute Name"
+                                                           id="institute1">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="form-group">
+                                                    <label for="yearPassed1" class="mb-1">Year of Passing</label>
+                                                    <input type="text" class="form-control br-0" placeholder="Year of Passing"
+                                                           id="yearPassed1">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="form-group">
+                                                    <label for="percentage1" class="mb-1">Percentage/CGPA</label>
+                                                    <input type="text" class="form-control" placeholder="Enter Percentage/CGPA"
+                                                           id="percentage1">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="form-group">
+                                                    <label for="courseType1" class="mb-1">Course Type</label>
+                                                    <select class="form-control" id="courseType1">
+                                                        <option>Regular</option>
+                                                        <option>Correspondence</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ng-container>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="btn-group float-right">
+                                <button type="button" class="btn bg-first text-white mr-2 br-0">Next</button>
+                                <button type="button" class="btn btn-light br-0">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
