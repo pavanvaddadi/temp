@@ -1,0 +1,257 @@
+@import "variables";
+
+body {
+  background-color: @bg-color !important;
+  font-family: @brand-font-style;
+}
+
+
+.font-xs {
+  font-size: 0.6rem;
+}
+
+.font-sm {
+  font-size: 0.8rem;
+}
+
+.font-md {
+  font-size: 1rem;
+}
+
+.font-md-2 {
+  font-size: 1.2rem;
+}
+
+.font-lg {
+  font-size: 1.5rem;
+}
+
+.card-title {
+  color: #000000;
+  margin-bottom: 0.625rem;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.text-first {
+  color: @primary;
+}
+
+.bg-first {
+  background-color: @primary;
+}
+
+.modal-info {
+  color: #31708f;
+  background-color: #d9edf7;
+}
+.btn-light {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+
+.custom-checkbox {
+  & .custom-control-label::before {
+    border-radius: 0;
+    border: 2px solid #405189;
+  }
+}
+
+  .container-fluid {
+    font-family: 'Varela Round', sans-serif;
+  }
+
+
+  label {
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+  }
+
+  .icon-textAlign {
+    vertical-align: super;
+    padding-left: 5px;
+    padding-top: 2px;
+  }
+
+  .page-breadcrumb {
+    padding: 0;
+    background: 0 0;
+    margin: 0 0 1.5rem;
+    position: relative;
+    text-shadow: #fff 0 1px;
+    & .breadcrumb > li.breadcrumb-item {
+      max-width: 130px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: all .3s ease-in-out;
+      & .breadcrumb-item::before {
+        display: inline-block;
+        padding-right: .5rem;
+        color: inherit;
+        content: "/";
+      }
+    }
+  }
+  .schedulerList {
+    & th, & td {
+      white-space: nowrap !important;
+    }
+  }
+
+  li {
+    cursor: pointer;
+    & .dropdown-item {
+      cursor: pointer;
+      &:active {
+        background-color: @hover-bg-color !important;
+      }
+    }
+  }
+
+.schedulerHeading {
+    display: flex;
+  }
+
+.dropdownList {
+    position: relative;
+    & .dropdownItems {
+      position: absolute !important;
+      left: -100px !important;
+      top: 55% !important;
+      min-width: 5rem !important;
+    }
+  }
+
+.datePickerBox {
+    position: relative;
+    & .dPBtn {
+      padding: 1px 8px;
+      background-color: @primary;
+      border-color: @primary;
+      position: absolute;
+      top: -19%;
+      left: 83%;
+      border-radius: 0 !important;
+      &:focus, &:hover {
+        outline: 0;
+        box-shadow: 0 0 0 0.1rem rgb(223, 223, 226);
+      }
+    }
+
+    & .intervalBox {
+      padding: 5px 12px;
+      background-color:@primary;
+      border-color: @primary;
+      position: absolute;
+      top: 1%;
+      left: 89%;
+      border-radius: 0 !important;
+      &:focus, &:hover {
+        outline: 0;
+        box-shadow: 0 0 0 0.1rem rgb(223, 223, 226);
+      }
+    }
+    & .form-control-sm {
+      border-radius: 1px !important;
+      border: 2px solid #ddd;
+    }
+  }
+
+.searchBtn {
+    padding: 2px 8px;
+  }
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    // margin: 15px -15px 0px -15px;
+  }
+
+.br-0 {
+    border-radius: 1px !important;
+  }
+
+bs-datepicker-container {
+    margin-left: 5% !important;
+  }
+
+.table {
+    & .thead-light {
+      & th {
+        background-color: #f6f9fc;
+        color: #8898aa;
+      }
+    }
+    & tbody {
+      & th, td {
+        white-space: nowrap;
+      }
+      & td {
+        padding: 0.6rem;
+      }
+
+    }
+  }
+
+.sm-table {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    & th {
+      font-size: 1rem;
+      &.w-10 {
+        width: 10%;
+      }
+      &.w-85 {
+        width: 85%;
+      }
+      &.w-5 {
+        width: 5%;
+      }
+    }
+    & td {
+      font-size: 0.9rem;
+      color: #212529b5;
+    }
+  }
+
+.personalInfoBox {
+    & .form-control {
+      border-radius: 0;
+      font-size: 0.8rem;
+      padding: 10px auto;
+    }
+  }
+
+.nav-tabs {
+  & .nav-link {
+    background: #f6f8fa;
+    color: #000000;
+    border-radius: 0;
+    border: 1px solid #f3f3f3;
+    padding: .75rem 1.5rem;
+
+    &.active {
+      color: #000;
+      background-color: #ffffff;
+      border-color: #ebedf2 #ebedf2 #ffffff;
+    }
+  }
+}
+
+.preLoader {
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+  }
+
