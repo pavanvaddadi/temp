@@ -1,0 +1,55 @@
+//ts file
+
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-tabset-page',
+  templateUrl: './tabset-page.component.html',
+  styleUrls: ['./tabset-page.component.css']
+})
+export class TabsetPageComponent implements OnInit {
+
+  public isAddEducation = false;
+  public isAddExperience = false;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+
+
+// testing module file
+
+
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TestTableComponent } from './test-table/test-table.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { TestDepartmentComponent } from './test-department/test-department.component';
+import { TestDesignationComponent } from './test-designation/test-designation.component';
+import { TestLocationComponent } from './test-location/test-location.component';
+import {ModalModule} from "ngx-bootstrap/modal";
+import {BsDropdownModule} from "ngx-bootstrap/dropdown";
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { TestAddEmployeeComponent } from './test-add-employee/test-add-employee.component';
+import { TestJobDetailsComponent } from './test-job-details/test-job-details.component';
+import { AddEducationDetailsComponent } from './add-education-details/add-education-details.component';
+import { AddExperienceComponent } from './add-experience/add-experience.component';
+import { TestPaymentDetailsComponent } from './test-payment-details/test-payment-details.component';
+import { TabsetPageComponent } from './tabset-page/tabset-page.component';
+
+@NgModule({
+  imports: [
+      CommonModule,
+      FormsModule,
+      BrowserModule,
+      ModalModule.forRoot(),
+      BsDropdownModule.forRoot(),
+      TabsModule.forRoot()
+  ],
+   declarations: [TestTableComponent, TestDepartmentComponent, TestDesignationComponent, TestLocationComponent, TestAddEmployeeComponent, TestJobDetailsComponent, AddEducationDetailsComponent, AddExperienceComponent, TestPaymentDetailsComponent, TabsetPageComponent],
+})
+export class TestingModule { }
